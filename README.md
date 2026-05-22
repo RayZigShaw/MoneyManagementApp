@@ -1,50 +1,96 @@
-# Welcome to your Expo app 👋
+# Money Management App 💰
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A mobile application built with React Native and Expo for managing personal finances, tracking transactions, and generating financial reports.
 
-## Get started
+## Features
 
-1. Install dependencies
+- 📊 **Transaction Management** - Track income and expenses with detailed categorization
+- 📈 **Financial Reports** - Visualize spending patterns and generate comprehensive reports
+- 👤 **Multiple Accounts** - Manage transactions across different bank accounts
+- 🔐 **Secure Storage** - PIN-protected access and encrypted data storage
+- 🎨 **Modern UI** - Clean, intuitive interface with theme customization
+- 📱 **Mobile-First** - Optimized for iOS and Android devices
 
+## Prerequisites
+
+- Node.js (v14 or higher)
+- npm or yarn
+- Expo CLI
+- iOS Simulator or Android Emulator (or use Expo Go app)
+
+## Installation
+
+1. Clone the repository
+   ```bash
+   git clone https://github.com/RayZigShaw/MoneyManagementApp.git
+   cd MoneyManagementApp
+   ```
+
+2. Install dependencies
    ```bash
    npm install
    ```
 
-2. Start the app
-
+3. Start the development server
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+4. Open the app
+   - Press `i` for iOS Simulator
+   - Press `a` for Android Emulator
+   - Scan QR code with Expo Go app on your mobile device
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Project Structure
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```
+app/
+├── _layout.tsx          # Navigation layout
+├── _lib/               # Utilities and context
+│   ├── _AppContext.tsx
+│   ├── _ThemeContext.tsx
+│   └── theme.ts
+├── _services/          # Business logic
+│   ├── _db-service.ts
+│   ├── _backup-service.ts
+│   └── _safe-storage.ts
+├── components/         # Reusable UI components
+├── accounts/           # Account management screens
+├── home.tsx           # Home screen
+├── transactions.tsx   # Transactions screen
+├── reports.tsx        # Reports screen
+└── settings.tsx       # Settings screen
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Tech Stack
 
-## Learn more
+- **React Native** - Mobile app framework
+- **Expo** - Build and deployment platform
+- **TypeScript** - Type-safe JavaScript
+- **SQLite** - Local database
+- **React Navigation** - Navigation management
 
-To learn more about developing your project with Expo, look at the following resources:
+## Scripts
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+# Start development server
+npm start
 
-## Join the community
+# Lint code
+npm run lint
 
-Join our community of developers creating universal apps.
+# Type check
+npm run type-check
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Support
+
+For issues or questions, please open an issue on GitHub.
